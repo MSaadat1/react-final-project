@@ -1,0 +1,467 @@
+#root,
+html,
+body,
+.containers {
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*header*/
+.header {
+  background-color: #5f7adb;
+  height: 50vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.header h1 {
+  margin: 0;
+  color: white;
+  text-align: center;
+  letter-spacing: 20px;
+  font-weight: 400;
+}
+.header p {
+  background-color: white;
+  padding: 40px;
+  color: #5f7adb;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.header .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+}
+.buttons button {
+  background-color: white;
+  padding: 20px 60px;
+  border: none;
+  color: #5f7adb;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 700;
+}
+link {
+  color: #5f7adb;
+}
+.welcome-para {
+  cursor: pointer;
+  transition: background-image 0.3s ease-in-out, transform 2s;
+}
+.welcome-para:hover {
+  background-image: url(../public/project-images/galaxy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 200px;
+  transform: scale(1.1);
+  color: white;
+  box-shadow: 1px 1px 4px 5px #a2b2ee;
+  position: relative;
+  top: 20px;
+}
+/*main body*/
+.main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #2e3239;
+  gap: 40px;
+}
+.trending {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 40px;
+  margin-top: 40px;
+}
+.trending-text {
+  color: #a2b2ee;
+  font-weight: 80;
+  font-size: 20px;
+}
+.trending-arrow {
+  width: 80px;
+  position: relative;
+}
+.trending-img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.trending-arrow::before{
+  content: "Explore your knowledge by login in... ";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #2e3239;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3 ease;
+  box-sizing: border-box;
+}
+.trending-arrow:hover::before{
+  opacity: 1;
+}
+.book-image {
+  width: 80px;
+  position: relative;
+}
+.book-img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.book-image::before {
+  content: "Think you know all there is to know about our solar system? You might be surprised at some of the amazing details...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color:#2e3239;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3 ease;
+  box-sizing: border-box;
+}
+.book-image:hover::before {
+  opacity: 1;
+}
+/*visit page*/
+.visit-container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.visit-btn {
+  display: flex;
+  padding: 40px;
+  background-color: #2e3239;
+  width: 100%;
+  position: relative;
+  gap: 40px;
+  justify-content: flex-start;
+}
+.visit-btn button {
+  padding: 20px 30px;
+}
+.about-visit {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  background-color: #5f7adb;
+  padding: 40px;
+  margin: 0;
+  width: 100%;
+  color: white;
+}
+.about p {
+  width: 50%;
+  text-align: justify;
+}
+.about :nth-child(3) {
+  font-size: 20px;
+}
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #2e3239;
+  padding: 60px;
+}
+.sign-up-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form input {
+  width: 400px;
+  height: 50px;
+}
+form button {
+  width: 200px;
+  margin: auto;
+  padding: 15px;
+  color: white;
+  border: none;
+}
+.form-submit {
+  background-color: #5f7adb;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  background-color: #2e3239;
+  width: 100%;
+  padding: 40px;
+  height: 100%;
+}
+.contact p {
+  color: grey;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+/* loginModel*/
+
+.loginModel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 320px;
+  position: absolute;
+  background: linear-gradient(to bottom, #ffff 0%, #699bf7 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 20px;
+  border-radius: 5px;
+}
+
+.loginModel input {
+  width: 200px;
+  background-color: white;
+  border: none;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginModel p {
+  padding: 10px;
+  background-color: inherit;
+}
+
+.loginModel button {
+  background-color: inherit;
+}
+/*users*/
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #2e3239;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+}
+.user-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.active .user-btn {
+  display: flex;
+  flex-direction: column;
+  background-color: #5f7adb;
+  position: absolute;
+  top: 100px;
+  height: 50%;
+  width: 50%;
+  opacity: 0.95;
+  cursor: pointer;
+  z-index: 1;
+}
+.user-btn button {
+  margin-right: 20px;
+  padding: 15px 40px;
+}
+.user-name,
+h2 {
+  color: white;
+}
+.link {
+  text-decoration: none;
+}
+.book-collections {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+}
+.favorite-books p {
+  color: white;
+}
+.favorite-books {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* carousel- slides*/
+.carousel-container {
+  display: flex;
+  margin-bottom: 50px;
+}
+.carousel-image {
+  width: 300px;
+  height: 400px;
+}
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  margin: 0px 20px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 5px #a2b2ee;
+}
+.carousel-details {
+  display: flex;
+  flex-direction: column;
+}
+.carousel-details p {
+  text-align: justify;
+  width: 400px;
+  color: white;
+}
+.carousel-details :nth-child(1) {
+  color: #5f7adb;
+}
+.carousel-details :nth-child(3) {
+  color: #5f7adb;
+}
+.carousel-btn {
+  box-shadow: 1px 3px 50px 10px #a2b2ee inset;
+}
+.hamburger-btn {
+  font-size: 40px;
+  color: #5f7adb;
+  cursor: pointer;
+}
+
+@media (min-width: 1280px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* styles for iPads and iPhone*/
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  .main-body {
+    height: 100vh;
+  }
+  .loginModel {
+    right: 200px;
+  }
+  .carousel-container {
+    flex-direction: column;
+  }
+  .carousel-slide {
+    flex-direction: column;
+  }
+  .carousel-btn {
+    width: 200px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .carousel-details,
+  .carousel-details p {
+    text-align: center;
+  }
+  .about-visit {
+    flex-direction: column;
+    height: 100%;
+  }
+  .about p {
+    width: 100%;
+  }
+  .user-btn {
+    display: none;
+  }
+  .user-btn button {
+    margin: auto;
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 414px) {
+  .header h1 {
+    font-weight: 200;
+    letter-spacing: 10px;
+  }
+  .title hr {
+    width: 200px;
+  }
+  .header p {
+    padding: 10px;
+  }
+  .loginModel {
+    width: 240px;
+    right: 90px;
+  }
+  .trending-arrow,
+  .book-image {
+    width: 40px;
+  }
+  .trending-text {
+    width: 20px;
+    margin-right: 40px;
+  }
+  .carousel-image {
+    width: 200px;
+    height: 300px;
+  }
+  .carousel-container {
+    width: 280px;
+  }
+  .carousel-details p {
+    width: 200px;
+    text-align: center;
+  }
+  .sign-up-form {
+    padding: 20px;
+  }
+  form input {
+    width: 250px;
+  }
+  .user-btn {
+    display: none;
+  }
+  .user-btn button {
+    margin: auto;
+    padding: 20px 30px;
+  }
+}

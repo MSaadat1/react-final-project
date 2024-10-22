@@ -1,0 +1,39 @@
+.book-container {
+  /* flex: 1 1 200px; */
+  text-align: center;
+  width: 250px;
+  background-color: #699BF7 ;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.book-images {
+  width: 150px;
+  height: 200px;
+}
+.book-titles, .book-authors{
+    padding: 0px;
+    color: white;
+    font-size: 10px;
+}
+.add-btn{
+  margin-bottom: 10px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.overview-container{
+  position:absolute;
+  bottom: 20;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
