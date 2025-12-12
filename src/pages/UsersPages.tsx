@@ -25,18 +25,18 @@ import { useState } from "react";
             Home
           </Link>
         </button>
-        <button>
+        {/* <button>
           <Link to="/visit" className="link">
             Visit
           </Link>
-        </button>
+        </button> */}
         <button onClick={handleLogOut} className="link">
           Log out
         </button>
       </div>
       <div className="hamburger-btn" onClick={toggleNavbar}>&#9776;</div>
       <div className="user-name">
-        <p>Welcome User {user ? user.id : ""}</p>
+        <p>Welcome {user ? user.username : ""}</p>
       </div>
     </div>
     <div className="add-book">

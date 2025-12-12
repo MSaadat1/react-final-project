@@ -45,46 +45,49 @@ export function VisitPage() {
               visual form of a document or a typeface without relying on
               meaningful content.
             </p>
-            <p>You Can Sign up by filling out this form......</p>
           </div>
-          <div className="sign-up-form">
-            <form
-              action=""
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleCreateUsers({
-                  username: user,
-                  email: email,
-                  password: password,
-                })
-                  .then(() => {
-                    reset();
+          <div className="sign-up">
+            <p>You Can Sign up by filling out this form......</p>
+
+            <div className="sign-up-form">
+              <form
+                action=""
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleCreateUsers({
+                    username: user,
+                    email: email,
+                    password: password,
                   })
-                  .catch(() => toast.error("Could not make the new user!"));
-              }}
-            >
-              <input
-                type="text"
-                placeholder="Name"
-                value={user}
-                onChange={(e) => setUser(e.target.value)}
-              />
-              <input
-                type="text"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                type="text"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <button className="form-submit" type="submit" value="submit">
-                Submit
-              </button>
-            </form>
+                    .then(() => {
+                      reset();
+                    })
+                    .catch(() => toast.error("Could not make the new user!"));
+                }}
+              >
+                <input
+                  type="text"
+                  placeholder="Name"
+                  value={user}
+                  onChange={(e) => setUser(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <button className="form-submit" type="submit" value="submit">
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         <div className="contact">

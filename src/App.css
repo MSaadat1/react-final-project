@@ -41,7 +41,8 @@ body,
   gap: 20px;
   border-radius: 5px;
 }
-.buttons button {
+.buttons button,
+.buttons a {
   background-color: white;
   padding: 20px 60px;
   border: none;
@@ -50,24 +51,22 @@ body,
   border-radius: 5px;
   font-weight: 700;
 }
-link {
-  color: #5f7adb;
-}
+
 .welcome-para {
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: background-image 0.3s ease-in-out, transform 2s;
 }
 .welcome-para:hover {
   background-image: url(../public/project-images/galaxy.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 130px;
-  width: 200px;
+  /* height: 130px;
+  width: 200px; */
   transform: scale(1.1);
   color: white;
   box-shadow: 1px 1px 4px 5px #a2b2ee;
   position: relative;
-  top: 20px;
+  /* top: 20px; */
 }
 /*main body*/
 .main-body {
@@ -102,7 +101,7 @@ link {
   max-width: 100%;
   object-fit: cover;
 }
-.trending-arrow::before{
+.trending-arrow::before {
   content: "Explore your knowledge by login in... ";
   position: absolute;
   top: 15px;
@@ -118,7 +117,7 @@ link {
   transition: opacity 0.3 ease;
   box-sizing: border-box;
 }
-.trending-arrow:hover::before{
+.trending-arrow:hover::before {
   opacity: 1;
 }
 .book-image {
@@ -138,7 +137,7 @@ link {
   padding: 10px;
   display: flex;
   justify-content: center;
-  background-color:#2e3239;
+  background-color: #2e3239;
   color: white;
   text-align: center;
   opacity: 0;
@@ -173,6 +172,7 @@ link {
 .about-visit {
   display: flex;
   align-items: center;
+  gap: 20px;
   height: 50vh;
   background-color: #5f7adb;
   padding: 40px;
@@ -181,8 +181,11 @@ link {
   color: white;
 }
 .about p {
-  width: 50%;
+  line-height: 20px;
   text-align: justify;
+}
+.about-title {
+  flex: 2;
 }
 .about :nth-child(3) {
   font-size: 20px;
@@ -329,6 +332,7 @@ h2 {
 .carousel-container {
   display: flex;
   margin-bottom: 50px;
+  align-items: center;
 }
 .carousel-image {
   width: 300px;
@@ -361,7 +365,8 @@ h2 {
   color: #5f7adb;
 }
 .carousel-btn {
-  box-shadow: 1px 3px 50px 10px #a2b2ee inset;
+  color: #5f7adb;
+  font-size: 40px;
 }
 .hamburger-btn {
   font-size: 40px;

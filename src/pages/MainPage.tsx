@@ -42,11 +42,9 @@ export const MainPage: React.FC = () => {
           <p className="welcome-para">To your own Space library</p>
         </div>
         <div className="buttons">
-          <button>
-            <Link to="/visit" className="link">
-              Visit
-            </Link>
-          </button>
+          <Link to="/visit" className="link">
+            Sign Up
+          </Link>
           {user ? (
             <button onClick={logoutUser}>Logout</button>
           ) : (
@@ -61,7 +59,10 @@ export const MainPage: React.FC = () => {
       <div className="main-body">
         <div className="trending">
           <div className="trending-arrow">
-            <img src="./project-images/arrow-curve.png" className="trending-img" />
+            <img
+              src="./project-images/arrow-curve.png"
+              className="trending-img"
+            />
           </div>
           <span className="trend-container">
             <p className="trending-text">Trending</p>
@@ -87,9 +88,9 @@ export const MainPage: React.FC = () => {
                   <p>{carouselData[slides].overview}</p>
                 </div>
               </div>
-              <button className="carousel-btn" onClick={nextSlide}>
-                NEXT
-              </button>
+              <span className="carousel-btn" onClick={nextSlide}>
+                <i className="fas fa-arrow-right"></i>
+              </span>
             </>
           )}
         </div>

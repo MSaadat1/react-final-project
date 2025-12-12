@@ -1,5 +1,6 @@
 export type Books = {
-    bookId: unknown
+    userId: number
+    bookId: number,
     id: number,
     image: string,
     title: string,
@@ -14,3 +15,9 @@ export type Users = {
     email: string,
     password: string
 }
+
+export type Favorite = {
+    id: number;
+    userId: number;
+    bookId: number;
+};

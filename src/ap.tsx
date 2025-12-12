@@ -1,4 +1,4 @@
-import { Books, Users } from "./types";
+import { Books, Users, Favorite } from "./types";
 export const baseUrl = "http://localhost:3000";
 
  const getAllBooks = (): Promise<Books[]> => {
@@ -10,7 +10,7 @@ export const baseUrl = "http://localhost:3000";
   });
 };
 
-const addFavorite = (userId: number, bookId: number): Promise<Books[]> => {
+const addFavorite = (userId: number, bookId: number): Promise<Favorite[]> => {
   return fetch(`${baseUrl}/favorites`, {
     method: "POST",
     headers: {
@@ -33,7 +33,7 @@ const removeFavorite = (favoriteId: number): Promise<void> => {
   });
 };
 
-const getAllFavoritesByUser = (userId: number): Promise<Books[]> => {
+const getAllFavoritesByUser = (userId: number): Promise<Favorite[]> => {
   return fetch(`${baseUrl}/favorites?userId=${userId}`).then((res) =>
     res.json()
   );

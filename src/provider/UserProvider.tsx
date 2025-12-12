@@ -1,5 +1,11 @@
-import { createContext, useState, useContext, useEffect, ReactNode } from "react";
-import { Users, Books } from "../types.ts";
+import {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  ReactNode,
+} from "react";
+import { Users, Books, Favorite } from "../types.ts";
 import { Requests } from "../ap.tsx";
 import toast from "react-hot-toast";
 
@@ -14,7 +20,7 @@ const UserContext = createContext<userProviderType>({
   handleFavoriteToggle: () => {},
   handleCreateUsers: async () => {},
   carouselData: [],
-  setCarouselData: ()=>{},
+  setCarouselData: () => {},
 });
 
 export const useUser = () => {
@@ -25,7 +31,7 @@ export type userProviderType = {
   user: Users | null;
   loginUser: (email: string, password: string) => Promise<Users>;
   logoutUser: () => void;
-  favorites: Favorites[];
+  favorites: Favorite[];
   books: Books[];
   handleFavoriteToggle: (bookId: number) => void;
   handleCreateUsers: (user: Omit<Users, "id">) => Promise<void>;
@@ -33,18 +39,12 @@ export type userProviderType = {
   setCarouselData: React.Dispatch<React.SetStateAction<Books[]>>;
 };
 
-export type Favorites = {
-  id: number;
-  userId: number;
-  bookId: number;
-};
-
 export const UserProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [user, setUser] = useState<Users | null>(null);
   const [books, setBooks] = useState<Books[]>([]);
-  const [favorites, setFavorites] = useState<Favorites[]>([]);
+  const [favorites, setFavorites] = useState<Favorite[]>([]);
   const [carouselData, setCarouselData] = useState<Books[]>([]);
 
   const refetchData = () => {
@@ -120,7 +120,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({
     setFavorites([]);
   };
 
-  const handleFavoriteToggle = (bookId: number) => {
+  const handleFavoriteToggle = (bookId: number): void => {
     if (!user) return;
 
     const favorite = favorites.find(
