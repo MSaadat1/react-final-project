@@ -10,7 +10,7 @@ export const baseUrl = "http://localhost:3000";
   });
 };
 
-const addFavorite = (userId: number, bookId: number): Promise<Favorite[]> => {
+const addFavorite = (userId: number, bookId: number): Promise<Favorite> => {
   return fetch(`${baseUrl}/favorites`, {
     method: "POST",
     headers: {

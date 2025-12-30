@@ -86,7 +86,7 @@ body,
   align-items: center;
   margin: auto;
   gap: 40px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .trending-text {
   color: #a2b2ee;
@@ -332,7 +332,10 @@ h2 {
 .carousel-container {
   display: flex;
   margin-bottom: 50px;
+  justify-content: center;
   align-items: center;
+  scroll-behavior: smooth;
+  max-width: 1000px;
 }
 .carousel-image {
   width: 300px;
@@ -366,7 +369,8 @@ h2 {
 }
 .carousel-btn {
   color: #5f7adb;
-  font-size: 40px;
+  font-size: 30px;
+  text-align: center;
 }
 .hamburger-btn {
   font-size: 40px;
@@ -374,7 +378,7 @@ h2 {
   cursor: pointer;
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
   .hamburger-btn {
     display: none;
   }
@@ -393,18 +397,27 @@ h2 {
   }
   .carousel-container {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .carousel-slide {
     flex-direction: column;
+    width: clamp(200px, 40%, 300px);
+    padding: clamp(8px, 3%, 15px);
   }
   .carousel-btn {
-    width: 200px;
+    width: 100px;
     margin: auto;
     margin-top: 10px;
   }
   .carousel-details,
   .carousel-details p {
     text-align: center;
+    width: 200px;
+  }
+  .carousel-image {
+    width: 200px;
+    height: 200px;
   }
   .about-visit {
     flex-direction: column;
@@ -441,19 +454,40 @@ h2 {
   .book-image {
     width: 40px;
   }
+  
   .trending-text {
     width: 20px;
     margin-right: 40px;
   }
+  .main-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding: 40px;
+  }
   .carousel-image {
     width: 200px;
-    height: 300px;
+    height: 200px;
   }
   .carousel-container {
-    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding-top: 10px;
   }
   .carousel-details p {
-    width: 200px;
+    /* width: 100px; */
+    text-align: center;
+  }
+  .carousel-slide {
+    width: clamp(180px, 80%, 220px);
+    padding: clamp(5px, 4%, 10px);
+  }
+  .carousel-btn {
+    width: 100px;
     text-align: center;
   }
   .sign-up-form {
